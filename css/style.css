@@ -1,0 +1,246 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+*{
+    box-sizing: border-box;
+}
+.page-container{ 
+    display: grid;
+    font-size: 2rem;
+    text-align: center;
+    grid-template-columns: 1fr repeat(3, 1fr);
+    grid-template-rows: .25fr;
+    
+
+    grid-template-areas: 
+    "header header header header"
+    "nav main main main"
+    "nav gallery gallery gallery"
+    "nav gallery gallery gallery"
+    "foother foother foother foother"
+
+    ;
+    gap: .5rem 
+    }
+    .header{
+        
+        grid-area: header;
+        background-color: black;
+        color: white;
+        border: .2rem solid white;
+    }
+    .user {
+        display:flex;
+        color: white;
+        justify-content: flex-end;
+        justify-items: center;
+        margin-right: .5rem;
+        margin-top:1rem;
+        align-items: center;
+        height: 20px;
+       
+       
+    }
+    .user :hover{
+        background-color: red;
+        color: white;
+        transform: scale(1.1);
+       
+    }
+    .user i{
+        margin: .5rem;
+    }
+    .log-in{
+        display: flex;
+        flex-direction: row;
+        color: white;
+        border: solid 3px white;
+       width: 20vw;
+       align-items: flex-start;
+       margin-left: 35rem;
+    }
+    .log-in a{
+        text-decoration: none;
+        list-style-type: none;
+        background-color: white;
+        color: black;
+        border-radius: .5rem;
+    }
+    .log-in a:hover{
+        background-color: red;
+        color: white;
+        transform: scale(1.1);  
+    }
+    .logo{
+        display: flex;
+        color: red;
+        justify-content: center;
+        align-items: center;
+    }
+    .iso{
+        color:  white;
+    }
+    .nav-bar{
+        grid-area:nav ;
+        display: flex;
+        border-radius: .5rem;
+        list-style-type: none;
+        border: 2px solid white; 
+    }
+    .nav-bar ul li a{
+       text-decoration: none;
+       list-style-type: none;
+        display: flex;
+        margin-bottom: .5rem;
+        margin-right: .8rem;
+        
+        border-radius: .5rem;
+        color: white
+        
+    }
+    .nav-bar ul li a:hover{
+        background-color: red;
+        color: white;
+        transform: scale(1.1);
+    }
+    .nav-barhome{
+        display: flex;
+        color: white;
+    }
+    .item2{
+        grid-area:main ;
+        background-color:red;
+        color: black;
+    }
+    .item7{
+        grid-area:gallery ;
+        display: grid;
+        grid-template-columns: repeat(4, 24%);
+        
+        grid-auto-rows: max-content;
+        gap: .2rem;
+        margin-right: .2rem;
+        background-color: black; 
+        width: 90%;
+    }
+    .img{
+       display: flex;
+       border: 1px solid;
+       background-color: white;
+       border-radius: .8rem;
+       flex-direction: column;
+       text-align: center;
+    }
+    .img :hover{
+        transform: scale(1.1);
+    }
+    .figcaption{
+        border-top: solid 1px;
+        
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .descuento{
+        text-decoration-line: line-through;
+    }
+    .item8{
+       
+        grid-area:foother ;
+        display:flex;
+        background-color:gray ;
+        padding: .2rem;
+    }
+    .footer-container{
+      display: flex;
+      justify-items: space-around;
+      
+    }
+    .data-fiscal{
+        margin-left: 25rem;
+    }
+   .contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: stretch;
+    font-size: small;
+    margin-left: 2rem;
+    padding: .2rem;
+    border-right: 1px solid;
+    border-left: 1px solid;
+   }
+   .redes{
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    margin-left: 2rem;
+    padding: .2rem;
+    border-right: 1px solid;
+    border-left: 1px solid
+
+   }
+   .logo-redes{
+    display: flex;
+    color:white;
+    justify-content: space-around;
+   }
+   .redes .logo .iso :hover{
+    color: red;
+   }
+   /*media queri*/
+   @media screen and (max-width: 1254px ){
+    .item7{
+        grid-template-columns: repeat(3, 1fr);
+    }
+   }
+   @media screen and (max-width: 930px){
+    .item7{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .data-fiscal{
+        margin-left: 15rem;
+    }
+   }
+  @media screen and (max-width: 670px){
+    .page-container{
+        grid-template-columns: 120px 1fr ;
+        grid-template-areas:
+        "header""header"
+        "nav""gallery"
+        "nav""gallery"
+        "nav""gallery"
+        "nav""gallery"
+        "nav""gallery"
+        "nav""gallery"
+        "nav""gallery"
+        "nav""gallery"
+        "footer" "footer"
+     
+        ;
+    }
+    .nav-bar ul li a{
+       font-size: small;
+    }
+    .item7{
+        grid-template-columns: 1fr;
+    }
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+       margin-left: 10rem;
+       align-items: flex-start;
+       justify-items: flex-start;
+    }
+    .data-fiscal{
+        margin-left: 2rem;
+    }
+   }
+ 
+
+
+    
+    
+
